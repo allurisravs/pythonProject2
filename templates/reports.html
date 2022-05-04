@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Record</title>
+
+<style>
+table, th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+</style>
+
+</head>
+
+<body>
+  <h1 style="color: green">Report dashboard</h1>
+
+  <table>
+    <thead><tr>
+        <th>Id</th>
+        <th>Object_name</th>
+        <th>IP_address</th>
+        <th>Owner_name</th>
+
+    </tr></thead>
+    <tbody>
+    {% for row in reports %}
+
+     <tr>
+        <td>{{ row['Id']}}</td>
+        <td>{{ row['Object_name'] }}</td>
+        <td>{{ row['IP_address'] }}</td>
+        <td>{{ row['Owner_name'] }}</td>
+
+     </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+
+</html>
